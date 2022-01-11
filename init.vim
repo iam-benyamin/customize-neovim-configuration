@@ -62,7 +62,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons'		" Developer Icons
 " color schemes
 Plug 'https://github.com/morhetz/gruvbox'               " scheme gruvbox
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-
+Plug 'joshdick/onedark.vim' " onedark
 
 call plug#end()
 
@@ -71,6 +71,21 @@ call plug#end()
 set background=dark
 colorscheme gruvbox
 " colorscheme jellybeans
+
+" if you wont to use onedark theme un comment next to lines
+" next line you have to enter your theme config path
+" source $HOME/.config/nvim/themes/onedark.vim
+" colorscheme onedark
+"
+" colorscheme deus
+" colorscheme anderson
+" colorscheme atom
+" colorscheme afterglow
+" colorscheme flattend_dark
+" colorscheme alduin
+" colorscheme focuspoint
+" colorscheme jellybeans
+" there is much more colorscheme and you can use them with :colorscheme <tab>
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
