@@ -1,8 +1,9 @@
 " syntax hightlight
 syntax on
 
-set encoding=utf-8
+set encoding=UTF-8
 
+" tabs and indentation
 set smartindent
 set smartcase
 set autoindent
@@ -46,9 +47,6 @@ set clipboard=unnamed
 " Makes search act like search in modern browsers
 set incsearch
 
-set updatetime=10
-
-
 " vim-plug from 'https://github.com/junegunn/vim-plug'
 call plug#begin()
 
@@ -62,14 +60,14 @@ Plug 'https://github.com/ryanoasis/vim-devicons'		" Developer Icons
 " color schemes
 Plug 'https://github.com/morhetz/gruvbox'               " scheme gruvbox
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'joshdick/onedark.vim' " onedark
+Plug 'joshdick/onedark.vim'                             " onedark
 
 call plug#end()
 
 
 " color scheme setting
-set background=dark
 colorscheme gruvbox
+set background=dark
 " colorscheme jellybeans
 
 " if you wont to use onedark theme un comment next to lines
