@@ -22,9 +22,6 @@ set undofile
 set number
 set relativenumber
 
-" cursor always be in middel of screen
-set scrolloff=5
-
 " set extra line before the number for show errors
 set signcolumn=yes
 
@@ -34,6 +31,9 @@ set colorcolumn=80
 
 " Enable cursor line position tracking:
 set cursorline
+
+" cursor always be in middel of screen
+set scrolloff=5
 
 " can use mouse
 set mouse=a
@@ -46,6 +46,9 @@ set clipboard=unnamed
 
 " Makes search act like search in modern browsers
 set incsearch
+
+" Give more space for displaying messages.
+set cmdheight=1
 
 " vim-plug from 'https://github.com/junegunn/vim-plug'
 call plug#begin()
@@ -61,6 +64,10 @@ Plug 'https://github.com/ryanoasis/vim-devicons'		" Developer Icons
 Plug 'https://github.com/morhetz/gruvbox'               " scheme gruvbox
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'joshdick/onedark.vim'                             " onedark
+
+" repo url is 'https://github.com/neoclide/coc.nvim'
+" google 'coc' for install autocomplition for your programming language
+Plug 'neoclide/coc.nvim', {'branch': 'release'}         " coc autocomplition for vim
 
 call plug#end()
 
@@ -110,3 +117,16 @@ let g:airline_powerline_fonts=1
 " nerdtree config
 " show hidden files
 let NERDTreeShowHidden=1
+
+
+" this line do auto complite with tab and use coc for this perpose
+" this 10th installed plugin
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" coc set file type config for scss from coc-css extention
+autocmd FileType scss setl iskeyword+=@-@
+
