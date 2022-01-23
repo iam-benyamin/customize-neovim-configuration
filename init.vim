@@ -1,6 +1,9 @@
 " syntax hightlight
 syntax on
 
+" can config neovim by file type
+filetype plugin on
+
 set encoding=UTF-8
 
 " tabs and indentation
@@ -26,7 +29,7 @@ set relativenumber
 set signcolumn=yes
 
 " vertical line hightlight at column 80
-set colorcolumn=80
+set colorcolumn=79
 " highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Enable cursor line position tracking:
@@ -46,9 +49,17 @@ set clipboard=unnamed
 
 " Makes search act like search in modern browsers
 set incsearch
+" uper or lower case is important in searches
+set ignorecase
 
 " Give more space for displaying messages.
-set cmdheight=1
+set cmdheight=2
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+set history=10
 
 " vim-plug from 'https://github.com/junegunn/vim-plug'
 call plug#begin()
