@@ -80,28 +80,21 @@ Plug 'joshdick/onedark.vim'                             " onedark
 " google 'coc' for install autocomplition for your programming language
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         " coc autocomplition for vim
 
+" fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
 " color scheme setting
 colorscheme gruvbox
 set background=dark
-" colorscheme jellybeans
 
 " if you wont to use onedark theme un comment next to lines
 " next line you have to enter your theme config path
 " source $HOME/.config/nvim/themes/onedark.vim
 " colorscheme onedark
-"
-" colorscheme deus
-" colorscheme anderson
-" colorscheme atom
 " colorscheme afterglow
-" colorscheme flattend_dark
-" colorscheme alduin
-" colorscheme focuspoint
-" colorscheme jellybeans
-" there is much more colorscheme and you can use them with :colorscheme <tab>
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -119,21 +112,18 @@ augroup THE_PRIMEAGEN
 augroup END
 
 "   airline configrautions
-" let g:airline_theme='badwolf'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
-
 
 " nerdtree config
 " show hidden files
 let NERDTreeShowHidden=1
 
-
 " this line do auto complite with tab and use coc for this perpose
 " this 10th installed plugin
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
-
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
