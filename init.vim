@@ -3,6 +3,7 @@ syntax on
 
 " can config neovim by file type
 filetype plugin on
+filetype on
 
 set encoding=UTF-8
 
@@ -83,6 +84,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}         " coc autocomplition for
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" javascript
+Plug 'neovim/nvim-lspconfig'
+
+" XML
+Plug 'sukima/xmledit'
+
 call plug#end()
 
 
