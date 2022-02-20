@@ -73,8 +73,8 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'  " CTRL + N for multiple 
 Plug 'https://github.com/ryanoasis/vim-devicons'		" Developer Icons
 
 " color schemes
-Plug 'https://github.com/morhetz/gruvbox'               " scheme gruvbox
-Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'morhetz/gruvbox'                                  " gruvbox
+Plug 'rafi/awesome-vim-colorschemes'                    " Retro
 Plug 'joshdick/onedark.vim'                             " onedark
 
 " repo url is 'https://github.com/neoclide/coc.nvim'
