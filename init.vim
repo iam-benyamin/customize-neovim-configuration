@@ -84,12 +84,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}         " coc autocomplition for
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 
 " javascript
 Plug 'neovim/nvim-lspconfig'
 
 " XML
 Plug 'sukima/xmledit'
+
+" git
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -118,6 +122,10 @@ augroup THE_PRIMEAGEN
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
+
+" fzf pop up window
+let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.8 } }
+" let $FZF_DEFAULT_OPTS='--reverse'
 
 "   airline configrautions
 let g:airline_theme='onedark'
