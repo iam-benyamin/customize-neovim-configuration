@@ -65,12 +65,12 @@ set history=10
 " vim-plug from 'https://github.com/junegunn/vim-plug'
 call plug#begin()
 
-Plug 'https://github.com/vim-airline/vim-airline'       " vim air line
-Plug 'https://github.com/preservim/nerdtree'            " NERDTree
-Plug 'https://github.com/tpope/vim-commentary'          " For Commenting gcc & gc
-Plug 'https://github.com/ap/vim-css-color'              " CSS Color Preview
-Plug 'https://github.com/terryma/vim-multiple-cursors'  " CTRL + N for multiple cursors
-Plug 'https://github.com/ryanoasis/vim-devicons'		" Developer Icons
+Plug 'vim-airline/vim-airline'       " vim air line
+Plug 'preservim/nerdtree'            " NERDTree
+Plug 'tpope/vim-commentary'          " For Commenting gcc & gc
+Plug 'ap/vim-css-color'              " CSS Color Preview
+Plug 'terryma/vim-multiple-cursors'  " CTRL + N for multiple cursors
+Plug 'ryanoasis/vim-devicons'		 " Developer Icons
 
 " color schemes
 Plug 'morhetz/gruvbox'                                  " gruvbox
@@ -80,6 +80,7 @@ Plug 'joshdick/onedark.vim'                             " onedark
 " repo url is 'https://github.com/neoclide/coc.nvim'
 " google 'coc' for install autocomplition for your programming language
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         " coc autocomplition for vim
+
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -109,7 +110,7 @@ set background=dark
 " colorscheme afterglow
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " next two function work on delete extra unnecessary white space
 fun! TrimWhitespace()
