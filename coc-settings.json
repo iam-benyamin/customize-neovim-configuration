@@ -6,7 +6,8 @@
         "html",
         "yaml",
         "json",
-        "python"
+        "python",
+        "jsx"
     ],
     // python config
     "python.linting.enabled": true,

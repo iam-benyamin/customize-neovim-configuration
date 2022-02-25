@@ -96,8 +96,18 @@ Plug 'sukima/xmledit'
 " git
 Plug 'tpope/vim-fugitive'
 
-call plug#end()
+" jsx Syntax Highlighting
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 
+" Asynchronous Lint Engine
+Plug 'dense-analysis/ale'
+
+" typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsxPlug'
+
+call plug#end()
 
 " color scheme setting
 colorscheme gruvbox
@@ -148,3 +158,15 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " coc set file type config for scss from coc-css extention
 autocmd FileType scss setl iskeyword+=@-@
 
+
+" ale configrautions
+let g:ale_linters = {
+            \ 'javascript': ['eslint'],
+            \ }
+
+let g:ale_fixers = {
+            \ 'javascript': ['prettier', 'eslint']
+            \ }
+
+let g:ale_fix_on_save = 1
+nmap <leader>d <Plug>(ale_fix)
