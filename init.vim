@@ -1,9 +1,13 @@
 " syntax hightlight
 syntax on
+syntax enable
 
 " can config neovim by file type
 filetype plugin on
 filetype on
+
+" automaticly save files
+set autowrite
 
 set encoding=UTF-8
 
@@ -54,7 +58,7 @@ set incsearch
 set ignorecase
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Enable folding
 set foldmethod=indent
@@ -110,14 +114,18 @@ Plug 'ianks/vim-tsxPlug'
 call plug#end()
 
 " color scheme setting
-colorscheme gruvbox
-set background=dark
+" colorscheme gruvbox
+" set background=dark
+colorscheme afterglow
+
+
+colorscheme onedark
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
 
 " if you wont to use onedark theme un comment next to lines
 " next line you have to enter your theme config path
 " source $HOME/.config/nvim/themes/onedark.vim
-" colorscheme onedark
-" colorscheme afterglow
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 " autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -170,3 +178,4 @@ let g:ale_fixers = {
 
 let g:ale_fix_on_save = 1
 nmap <leader>d <Plug>(ale_fix)
+
