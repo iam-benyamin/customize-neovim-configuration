@@ -197,3 +197,8 @@ let g:gitgutter_override_sign_column_highlight = 1
 
 " Update sign column every quarter second
 set updatetime=250
+
+
+" auto save
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_silent = 1  " do not display the auto-save notification
