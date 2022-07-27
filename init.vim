@@ -111,15 +111,19 @@ Plug 'dense-analysis/ale'
 Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsxPlug'
 
+Plug '907th/vim-auto-save'
+
+" git
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " color scheme setting
-" colorscheme gruvbox
-" set background=dark
-colorscheme afterglow
+colorscheme gruvbox
+set background=dark
+" colorscheme afterglow
 
 
-colorscheme onedark
+" colorscheme onedark
 " transparent background
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -179,3 +183,17 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 nmap <leader>d <Plug>(ale_fix)
 
+
+" Use fontawesome icons as signs
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+
+let g:gitgutter_override_sign_column_highlight = 1
+" highlight SignColumn guibg=bg
+" highlight SignColumn ctermbg=bg
+
+" Update sign column every quarter second
+set updatetime=250
