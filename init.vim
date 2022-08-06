@@ -115,6 +115,9 @@ Plug '907th/vim-auto-save'
 
 " git
 Plug 'airblade/vim-gitgutter'
+
+" copilot
+Plug 'github/copilot.vim'
 call plug#end()
 
 " color scheme setting
