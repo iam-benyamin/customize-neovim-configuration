@@ -99,7 +99,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 
 " Asynchronous Lint Engine
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " typescript
 Plug 'leafgarland/typescript-vim'
@@ -160,6 +160,7 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.9 } }
 
 
 "   airline configrautions
+" let g:airline_theme='onedark'
 let g:airline_theme='onedark'
 " let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
@@ -182,20 +183,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " coc set file type config for scss from coc-css extention
 autocmd FileType scss setl iskeyword+=@-@
-
-
-" ale configrautions
-let g:ale_linters = {
-            \ 'javascript': ['eslint'],
-            \ }
-
-let g:ale_fixers = {
-            \ 'javascript': ['prettier', 'eslint']
-            \ }
-
-let g:ale_fix_on_save = 1
-nmap <leader>d <Plug>(ale_fix)
-
 
 " Use fontawesome icons as signs
 let g:gitgutter_sign_added = '+'
